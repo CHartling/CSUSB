@@ -1,0 +1,69 @@
+$date
+	Wed Oct 02 18:55:01 2024
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module NANDusingNOR_tb $end
+$var wire 1 ! Q $end
+$var reg 1 " A $end
+$var reg 1 # B $end
+$scope module uut $end
+$var wire 1 " A $end
+$var wire 1 # B $end
+$var wire 1 ! Q $end
+$var wire 1 $ F $end
+$var wire 1 % E $end
+$var wire 1 & D $end
+$var wire 1 ' C $end
+$scope module u1 $end
+$var wire 1 " A $end
+$var wire 1 " B $end
+$var wire 1 ' Q $end
+$upscope $end
+$scope module u2 $end
+$var wire 1 # A $end
+$var wire 1 # B $end
+$var wire 1 & Q $end
+$upscope $end
+$scope module u3 $end
+$var wire 1 ' A $end
+$var wire 1 & B $end
+$var wire 1 % Q $end
+$upscope $end
+$scope module u4 $end
+$var wire 1 % A $end
+$var wire 1 % B $end
+$var wire 1 $ Q $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+1'
+1&
+0%
+1$
+0#
+0"
+1!
+$end
+#20
+0&
+1#
+#40
+1&
+0'
+0#
+1"
+#60
+0!
+0$
+1%
+0&
+1#
+#80

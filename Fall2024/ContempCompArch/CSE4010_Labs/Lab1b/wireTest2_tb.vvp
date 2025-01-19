@@ -1,0 +1,56 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1110-g18392a46)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 9;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_000001cdf4338f50 .scope module, "wireTest2_tb" "wireTest2_tb" 2 4;
+ .timescale -9 -9;
+v000001cdf41f58f0_0 .var "W", 0 0;
+v000001cdf41f5990_0 .var "X", 0 0;
+v000001cdf41f5a30_0 .net "Y", 0 0, L_000001cdf41f5b70;  1 drivers
+v000001cdf41f5ad0_0 .net "Z", 0 0, L_000001cdf433b470;  1 drivers
+S_000001cdf41f5760 .scope module, "uut" "wireTest2" 2 11, 3 2 0, S_000001cdf4338f50;
+ .timescale -9 -9;
+    .port_info 0 /INPUT 1 "W";
+    .port_info 1 /INPUT 1 "X";
+    .port_info 2 /OUTPUT 1 "Y";
+    .port_info 3 /OUTPUT 1 "Z";
+v000001cdf43390e0_0 .net "W", 0 0, v000001cdf41f58f0_0;  1 drivers
+v000001cdf4338440_0 .net "X", 0 0, v000001cdf41f5990_0;  1 drivers
+v000001cdf41c2b80_0 .net "Y", 0 0, L_000001cdf41f5b70;  alias, 1 drivers
+v000001cdf4337bf0_0 .net "Z", 0 0, L_000001cdf433b470;  alias, 1 drivers
+L_000001cdf41f5b70 .reduce/nor v000001cdf41f5990_0;
+L_000001cdf433b470 .reduce/nor L_000001cdf41f5b70;
+    .scope S_000001cdf4338f50;
+T_0 ;
+    %vpi_call 2 15 "$dumpfile", "wireTest2_tb.vcd" {0 0 0};
+    %vpi_call 2 16 "$dumpvars", 32'sb00000000000000000000000000000000, S_000001cdf4338f50 {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001cdf41f58f0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001cdf41f5990_0, 0, 1;
+    %delay 20, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000001cdf41f58f0_0, 0, 1;
+    %delay 20, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000001cdf41f5990_0, 0, 1;
+    %delay 20, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001cdf41f58f0_0, 0, 1;
+    %delay 20, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001cdf41f5990_0, 0, 1;
+    %vpi_call 2 33 "$display", "Wire Test Complete!" {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "wireTest2_tb.v";
+    "./wireTest2.v";
