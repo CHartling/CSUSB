@@ -1,0 +1,28 @@
+#!/bin/bash
+# hw1.sh
+
+# Get directory from user
+echo "Enter the directory you wish to backup: "
+read DIR
+
+# Determine if backup directory is in current directory
+# If not then create backup directory
+if [[ -d $DIR ]]
+then
+        echo "Found backup directory."
+else
+        mkdir $DIR
+        echo "Made backup directory."
+fi
+
+for filename in *.cpp
+do
+        cmp -s $filename $DIR/$filename
+        if [[ $? -eq 0 ]]
+        then
+                echo "File in the backup directory is up to date"
+        else
+                cp $filename $DIR/
+                echo "File has been successfully backed up."
+        fi
+done
