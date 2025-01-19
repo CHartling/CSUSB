@@ -1,0 +1,87 @@
+Query 1: print out titles table
+(1001, 'ASP.NET UNLEASHED', 4, 'ASP', datetime.date(2002, 4, 2), 'HARD COVER', 540)
+(1002, 'ORACLE10G COMP. REF.', 3, 'ORA', datetime.date(2005, 5, 1), 'PAPER BACK', 575)
+(1003, 'MASTERING EJB', 1, 'JEE', datetime.date(2005, 2, 3), 'PAPER BACK', 475)
+(1004, 'JAVA COMP. REF', 3, 'JAVA', datetime.date(2005, 4, 3), 'PAPER BACK', 499)
+(1005, 'PRO. VB.NET', 2, 'VB', datetime.date(2005, 6, 15), 'HARD COVER', 450)
+(1006, 'INTRO. VB.NET', 2, 'VB', datetime.date(2002, 12, 2), 'PAPER BACK', 425)
+
+
+
+Query 2: create customer table
+('custID', 'int', 'NO', 'PRI', None, '')
+('custName', 'varchar(30)', 'YES', '', None, '')
+('zip', 'int', 'YES', '', None, '')
+('city', 'varchar(30)', 'YES', '', None, '')
+('state', 'varchar(30)', 'YES', '', None, '')
+
+
+
+Query 3: Insert customers
+(1, 'Abraham Silberschatz', 12345, 'Sacramento', 'California')
+(2, 'Henry Korth', 21435, 'Boise', 'Idaho')
+(3, 'Calvin Harris', 54321, 'Dallas', 'Texas')
+(4, 'Martin Garrix', 45231, 'Las Vegas', 'Nevada')
+(5, 'James Goodwill', 13524, 'Jackson', 'Wyoming')
+
+
+
+Query 4: Find the publisher who has published the most titles
+('TATA MCGRAW-HILL', 2)
+('WROX', 2)
+
+
+
+Query 5: List the authors total price of their published books
+('DAVAID HUNTER', Decimal('949'))
+('KEVIN LONEY', Decimal('575'))
+('STEPHEN WALTHER', Decimal('540'))
+('ED. ROMANS', Decimal('475'))
+('JAMES GOODWILL', Decimal('450'))
+
+
+
+Query 6: select all titles with more than 1 author
+('PRO. VB.NET',)
+
+
+
+Query 7: select all publishers who have published a paper back book with a price below $500
+('WILLEY',)
+('TATA MCGRAW-HILL',)
+('WROX',)
+
+
+
+Query 8: select all authors who have written about 'JAVA' but not 'VISUAL BASIC.NET'
+('DAVAID HUNTER',)
+('ED. ROMANS',)
+
+
+
+Query 9: select all names of publishers whose email is a .com
+('WROX',)
+('TATA MCGRAW-HILL',)
+('TECHMEDIA',)
+
+
+
+Query 10: decrease the price of all books published before 2003 by 5% and increase all after 2004 by 15%
+(1001, 'ASP.NET UNLEASHED', 4, 'ASP', datetime.date(2002, 4, 2), 'HARD COVER', 540)
+(1002, 'ORACLE10G COMP. REF.', 3, 'ORA', datetime.date(2005, 5, 1), 'PAPER BACK', 575)
+(1003, 'MASTERING EJB', 1, 'JEE', datetime.date(2005, 2, 3), 'PAPER BACK', 475)
+(1004, 'JAVA COMP. REF', 3, 'JAVA', datetime.date(2005, 4, 3), 'PAPER BACK', 499)
+(1005, 'PRO. VB.NET', 2, 'VB', datetime.date(2005, 6, 15), 'HARD COVER', 450)
+(1006, 'INTRO. VB.NET', 2, 'VB', datetime.date(2002, 12, 2), 'PAPER BACK', 425)
+
+
+(1001, 'ASP.NET UNLEASHED', 4, 'ASP', datetime.date(2002, 4, 2), 'HARD COVER', 513)
+(1002, 'ORACLE10G COMP. REF.', 3, 'ORA', datetime.date(2005, 5, 1), 'PAPER BACK', 661)
+(1003, 'MASTERING EJB', 1, 'JEE', datetime.date(2005, 2, 3), 'PAPER BACK', 546)
+(1004, 'JAVA COMP. REF', 3, 'JAVA', datetime.date(2005, 4, 3), 'PAPER BACK', 574)
+(1005, 'PRO. VB.NET', 2, 'VB', datetime.date(2005, 6, 15), 'HARD COVER', 518)
+(1006, 'INTRO. VB.NET', 2, 'VB', datetime.date(2002, 12, 2), 'PAPER BACK', 404)
+
+
+
+MySQL connection is closed
